@@ -509,6 +509,7 @@ Overwrite tccd:
 void fix_exploit(void) {
     printf("[*] Exploit fixup");
     _offsets_init();
+    test_pplrw();
     pid_t myPid = getpid();
     uint64_t selfProc = getProc(myPid);
     funUcred(selfProc);
